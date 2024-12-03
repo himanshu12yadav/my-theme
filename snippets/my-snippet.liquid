@@ -1,0 +1,15 @@
+{% comment %}
+  Render a first word and a second word.
+  Accepts:
+    - word1: (String)
+    - word2: (String)
+
+  Usage:
+    {% render 'my-snippet', word1: 'Hello', word2: 'World' %}
+
+{% endcomment %}
+
+<p>The word is {{ word }} and the second word is {{ second_world }}</p>
+<img src="{{ 'image.png' | asset_url }}" alt="My Image" loading="lazy" width="100" height="100">
+
+<script src="{{ 'my-script.js' | asset_url }}" defer></script>
