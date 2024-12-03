@@ -15,6 +15,9 @@
   .drawer {
     visibility: hidden;
   }
+  .drawer.is-empty {
+    visibility: visible;
+  }
 </style>
 
 <cart-drawer class="drawer{% if cart == empty %} is-empty{% endif %}">
