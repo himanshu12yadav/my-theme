@@ -1,4 +1,15 @@
 <h2 style="text-align:{{section.settings.promotion_type}}">Promotion Name: {{ section.settings.title }}</h2>
+<div style="display:flex; justify-content:center; gap:10px">
+{% for block in section.blocks %}
+  {% if block.type == "promotion" %}
+    <div style="display:flex; flex-direction:column; align-items:center;">
+    <h3>{{ block.settings.title }}</h3>
+    </div>
+    {{ block.settings.image | image_url: width: 100 | image_tag }}
+  {% endif %}
+{% endfor % %}
+</div>
+
 
 {% schema %}
 {
@@ -38,7 +49,16 @@
       "type": "promotion",
       "name": "Promotion",
       "settings":[
-        
+        {
+        "type": "text",
+        "id":"title",
+        "label":"Title"
+        },
+        {
+          "type": "image_picker",
+          "id":"image",
+          "label":"Image"
+        }
       ]
     }
   ],
