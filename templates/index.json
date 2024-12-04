@@ -222,6 +222,18 @@
     },
     "promotions_group_yQaRYt": {
       "type": "promotions-group",
+      "blocks": {
+        "promotion_ka6ycy": {
+          "type": "promotion",
+          "settings": {
+            "title": "Banner",
+            "image": "shopify://shop_images/retail-shopping-package.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "promotion_ka6ycy"
+      ],
       "settings": {
         "title": "Promotions",
         "promotion_type": "center"
