@@ -135,6 +135,18 @@
       },
       "image-banner": {
         "type": "image-banner",
+        "blocks": {
+          "heading_nD8YTG": {
+            "type": "heading",
+            "settings": {
+              "heading": "Image banner",
+              "heading_size": "h1"
+            }
+          }
+        },
+        "block_order": [
+          "heading_nD8YTG"
+        ],
         "settings": {
           "image_overlay_opacity": 0,
           "image_height": "medium",
