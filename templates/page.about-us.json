@@ -15,9 +15,17 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "promotions_group_c7P99A": {
+      "type": "promotions-group",
+      "settings": {
+        "title": "Promotions",
+        "promotion_type": "center"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "promotions_group_c7P99A"
   ]
 }
