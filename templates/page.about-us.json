@@ -9,31 +9,6 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    },
-    "promotions_group_c7P99A": {
-      "type": "promotions-group",
-      "blocks": {
-        "promotion_gTeeMy": {
-          "type": "promotion",
-          "settings": {
-            "title": ""
-          }
-        }
-      },
-      "block_order": [
-        "promotion_gTeeMy"
-      ],
-      "settings": {
-        "title": "Promotions",
-        "promotion_type": "center"
-      }
-    },
     "image_banner_CF3EiB": {
       "type": "image-banner",
       "blocks": {
@@ -80,11 +55,36 @@
         "stack_images_on_mobile": true,
         "show_text_below": true
       }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "promotions_group_c7P99A": {
+      "type": "promotions-group",
+      "blocks": {
+        "promotion_gTeeMy": {
+          "type": "promotion",
+          "settings": {
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "promotion_gTeeMy"
+      ],
+      "settings": {
+        "title": "Promotions",
+        "promotion_type": "center"
+      }
     }
   },
   "order": [
-    "main",
     "image_banner_CF3EiB",
+    "main",
     "promotions_group_c7P99A"
   ]
 }
