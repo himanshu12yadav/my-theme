@@ -1468,7 +1468,7 @@
   },
   {
     "type": "promotions-group",
-    "name": "Tutorial",
+    "name": "Promotions",
     "settings": [
       {
         "type": "text",
