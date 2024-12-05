@@ -1467,10 +1467,9 @@
     ]
   },
   {
-    "type": "Tutorial",
+    "type": "promotions-group",
     "name": "Tutorial",
     "settings": [
-
       {
         "type": "text",
         "id": "promotion_name",
