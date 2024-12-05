@@ -1470,6 +1470,7 @@
     "type": "Tutorial",
     "name": "Tutorial",
     "settings": [
+
       {
         "type": "text",
         "id": "promotion_name",
