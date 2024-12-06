@@ -1467,15 +1467,5 @@
       }
     ]
   },
-  {
-    "type": "promotions-group",
-    "name": "Promotion",
-    "settings": [
-      {
-        "type": "text",
-        "id": "promotion_name",
-        "label": "Promotion"
-      }
-    ]
-  }
+
 ]
