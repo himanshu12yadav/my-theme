@@ -63,6 +63,16 @@
 <h2>Liquid setting</h2>
 <h2>{{ section.settings.liquid_setting }}</h2>
 
+<h2>Product </h2>
+<p>{{ section.settings.product_setting }} - {{ section.settings.product_setting.title }}</p>
+
+<h2>Product Listing</h2>
+{% for product in section.settings.product_list %}
+    <p>{{ product.title }} - {{ product.variants[0].price | money }}</p>
+
+{% endfor %}
+
+
 {% schema %}
 {
   "name":"Sections Tutorial",
@@ -193,6 +203,17 @@
       "type":"liquid",
       "id":"liquid_setting",
       "label":"Liquid setting"
+    },
+    {
+      "type":"product",
+      "id":"product_setting",
+      "label":"Product setting"
+    },
+    {
+      "type":"product_list",
+      "id":"product_list",
+      "label":"Product list",
+      "limit":10
     }
   ],
   "blocks":[],
