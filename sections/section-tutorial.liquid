@@ -1,16 +1,204 @@
-<p>Hello world</p>
+<h2>Text Setting</h2>
+<p>{{ section.settings.text_setting }}</p>
+
+<h2>Textarea setting</h2>
+<p>{{ section.settings.textarea_setting | newline_to_br }}</p>
+
+<h2>Richtext setting</h2>
+<p>{{ section.settings.richtext_setting }}</p>
+
+<h2>Inline setting</h2>
+<p>{{ section.settings.inline_richtext_setting }}</p>
+
+<h2>Number setting</h2>
+<p>{{ section.settings.number_setting }}</p>
+
+<h2>Range setting</h2>
+<p>{{ section.settings.range_setting }}</p>
+
+<h2>Select setting</h2>
+<p>{{ section.settings.select_setting }}</p>
+
+<h2>Checkbox setting</h2>
+<p>{{ section.settings.checkbox_setting }}</p>
+
+
+<p style="color:{{ section.settings.color_setting }};"><h2>Color setting : {{ section.settings
+    .color_setting
+    }}
+</h2></p>
+
+<div style="height:100px;background:{{ section.settings.color_background_setting }};">
+    <h2>Color Background Setting</h2>
+</div>
+{% if section.settings.image_picker_setting != blank %}
+{{ section.settings.image_picker_setting | image_url: width: 100 | img_tag: style:'height:200px;object-fit:cover;' }}
+{% endif %}
+
+{% if section.settings.video_setting != blank %}
+
+{% endif %}
+
+{{ section.settings.video_setting | video_tag:controls:true,autoplay:true,loop:true,muted:true, image_size: '100x100' }}
+
+<div>
+    <h2>External Video Url</h2>
+    <iframe
+        width="560",
+        height="315",
+        src="https://www.youtube.com/embed/{{ section.settings.video_url_setting.id }}",
+        title="YouTube video player",
+        frameborder="0"
+    >
+
+    </iframe>
+</div>
+
+<h2>Url setting</h2>
+<a href="{{ section.settings.url_setting }}">Click here</a>
+
+<h2>Html setting</h2>
+<h2>{{ section.setting.html_setting }}</h2>
+
+<h2>Liquid setting</h2>
+<h2>{{ section.settings.liquid_setting }}</h2>
+
 {% schema %}
 {
   "name":"Sections Tutorial",
   "tag":"section",
   "class":"section-tutorial",
-  "limits":2,
-  "settings":[],
+  "limit":2,
+  "settings":[
+    {
+      "type":"text",
+      "id":"text_setting",
+      "label":"Text setting",
+      "default":"This is my first setting",
+      "info":"This is some helper text",
+      "placeholder":"This is a placeholder"
+    },
+    {
+      "type":"textarea",
+      "id":"textarea_setting",
+      "label":"Textarea setting",
+      "placeholder":"This is a placeholder"
+    },
+    {
+      "type":"richtext",
+      "id":"richtext_setting",
+      "label":"Richtext setting"
+    },
+    {
+      "type":"inline_richtext",
+      "id":"inline_richtext_setting",
+      "label":"Inline Richtext setting"
+    },
+    {
+      "type":"number",
+      "id":"number_setting",
+      "label":"Number setting"
+    },
+    {
+      "type":"range",
+      "id":"range_setting",
+      "label":"Range setting",
+      "min":0,
+      "max":10,
+      "step":1,
+      "default":5,
+      "unit":"px"
+    },
+    {
+      "type":"select",
+      "id":"select_setting",
+      "label":"Select setting",
+      "options":[
+        {
+          "value":"option1",
+          "label":"Option 1",
+          "group":"Option 1"
+        },
+        {
+          "value":"Option2",
+          "label":"Option 2",
+          "group":"Option 1"
+        },
+        {
+          "value":"Option3",
+          "label":"Option 3"
+        }
+      ]
+    },
+    {
+      "type":"checkbox",
+      "id":"checkbox_setting",
+      "label":"Checkbox setting",
+      "type":"color",
+      "default":"#000000"
+    },
+    {
+      "type":"radio",
+      "id":"radio_setting",
+      "label":"Radio setting",
+      "options":[
+        {
+          "value":"option1",
+          "label":"Option 1"
+        },
+        {
+          "value":"option2",
+          "label":"Option 2"
+        }
+      ]
+    },
+    {
+      "type":"color",
+      "id":"color_setting",
+      "label":"Color setting",
+      "default":"#000000"
+    },
+    {
+      "type":"color_background",
+      "id":"color_background_setting",
+      "label":"Color background setting"
+    },
+    {
+      "type":"image_picker",
+      "id":"image_picker_setting",
+      "label":"Image picker setting"
+    },
+    {
+      "type":"video",
+      "id":"video_setting",
+      "label":"Video setting"
+    },
+    {
+      "type":"video_url",
+      "id":"video_url_setting",
+      "label":"Video url setting",
+      "accept":["youtube"]
+    },
+    {
+      "type":"url",
+      "id":"url_setting",
+      "label":"Url setting"
+    },
+    {
+      "type":"html",
+      "id":"html_setting",
+      "label":"Html setting"
+    },
+    {
+      "type":"liquid",
+      "id":"liquid_setting",
+      "label":"Liquid setting"
+    }
+  ],
   "blocks":[],
   "presets":[
     {
-      "name":"Sections Tutorial",
-      "settings":[]
+      "name":"Sections Tutorial"
     }
   ]
 }
